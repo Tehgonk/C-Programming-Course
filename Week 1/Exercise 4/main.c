@@ -1,31 +1,19 @@
-/*Exercise: 4
-Description: Write a program that asks the user to enter a two digit number and returns
-as output the number with its digits reversed. Number to reverse: 54.
-Author: Daniel Geula
-Date: 23/04/2022
-Version: 1.0
-Log:
-1.0: Initial release.
+/* Exercise 4 - Reversing two-digit numbers
+ * Author: Daniel Geula
+ * Date: 30/04/2022
+ * Version: 1.0
 */
 
 #include <stdio.h>
 
 int main() {
 
-    int n, remainder, reverse = 0;
+    int num;
 
-    printf("/****************************************************************/\n");
-    printf("Please enter number: ");
-    scanf("%d", &n);
+    printf("\nEnter a two digit number:");
+    scanf("%d", &num);
 
-    while(n != 0) {
-        remainder = n % 10;
-        reverse = reverse * 10 + remainder;
-        n /= 10;
-    }
-
-    printf("\nNumber reversed is: %d\n", reverse);
-    printf("/**************************************************************/\n");
+    printf("\n%d reversed is %d%d\n", num, num%10, num/10);
 
     return 0;
 }
